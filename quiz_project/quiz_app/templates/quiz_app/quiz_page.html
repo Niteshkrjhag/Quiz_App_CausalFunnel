@@ -1,0 +1,65 @@
+{% extends 'quiz_app/base.html' %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/quiz.css">
+{% endblock %}
+
+{% block content %}
+<div class="quiz-container">
+    <div class="row">
+        <div class="col-md-8">
+            <!-- Timer -->
+            <div class="timer-container alert alert-info">
+                <strong>Time Remaining:</strong> <span id="timer">30:00</span>
+            </div>
+            
+            <!-- Question Container -->
+            <div id="question-container" class="card mb-4">
+                <div class="card-header">
+                    <h5 id="question-title">Question 1</h5>
+                </div>
+                <div class="card-body">
+                    <div id="question-text" class="mb-4">Loading question...</div>
+                    
+                    <div id="options-container" class="mb-3">
+                        <!-- Options will be added dynamically -->
+                    </div>
+                    
+                    <div class="navigation-buttons">
+                        <button id="prev-btn" class="btn btn-secondary">Previous</button>
+                        <button id="next-btn" class="btn btn-primary">Next</button>
+                        <button id="submit-quiz-btn" class="btn btn-success d-none">Submit Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <!-- Question Overview Panel -->
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Question Overview</h5>
+                </div>
+                <div class="card-body">
+                    <p>Email: <strong>{{ email }}</strong></p>
+                    <p>Click on a question number to navigate directly to that question.</p>
+                    
+                    <div id="question-overview" class="d-flex flex-wrap">
+                        <!-- Question indicators will be added dynamically -->
+                    </div>
+                    
+                    <div class="mt-3">
+                        <span class="badge bg-secondary me-2">Not visited</span>
+                        <span class="badge bg-primary me-2">Visited</span>
+                        <span class="badge bg-success">Answered</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/js/quiz.js"></script>
+{% endblock %}
