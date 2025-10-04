@@ -28,6 +28,7 @@
                 </div>
                 
                 <div id="results-container">
+                    {{ result.user_answers|json_script:"user-answers-data" }}
                     <!-- Results will be dynamically loaded here -->
                 </div>
                 
