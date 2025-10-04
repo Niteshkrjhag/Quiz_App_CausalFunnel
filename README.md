@@ -5,7 +5,7 @@ A Django-based quiz application that fetches questions from the Open Trivia Data
 ## Deployed Application
 
 You can try the live application here:  
-[Quiz App Live](https://nitesh7673.pythonanywhere.com/)
+[![Open Quiz App](https://img.shields.io/badge/Open-Quiz%20App-00aced?style=for-the-badge&logo=python&logoColor=white)](https://nitesh7673.pythonanywhere.com/)
 
 ## Table of Contents
 - [Overview](#overview)
